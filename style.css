@@ -51,7 +51,7 @@ body div.page{
     width: 500px;
     margin: auto;
 }
-body p + p{
+body p{
     text-align: center;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 0.1px;
