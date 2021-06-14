@@ -19,7 +19,7 @@ body nav a{
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: black;
 }
-nav #marker{
+nav div#marker{
     position: absolute;
     height:2px;
     bottom: -8px;
@@ -43,7 +43,7 @@ body h2{
     -webkit-text-stroke-width: 0.4px;
     -webkit-text-stroke-color: black;
 }
-body p{
+body div.page{
     text-align: center;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 0.1px;
@@ -60,4 +60,28 @@ body p + p{
     margin: auto;
     margin-top: 400px;
     font-size: smaller;
+}
+
+body .arrow {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.right{
+    transform: rotate(-45eg);
+    -webkit-transform: rotate(-45deg);
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+.left{
+    transform: rotate(135eg);
+    -webkit-transform: rotate(135deg);
+    position: absolute;
+    top: 50%;
+    left: 10%;
 }

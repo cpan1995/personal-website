@@ -1,4 +1,19 @@
-const h2 = document.createElement('h2');
-h2.textContent = "This content added by JavaScript"; 
+const rightArrow = document.querySelector('.right');
+const leftArrow = document.querySelector('.left');
 
-document.querySelector('body').appendChild(h2); 
+console.log(rightArrow);
+
+rightArrow.addEventListener('click', function(event){
+    transformArrow(event);
+});
+
+function transformArrow(e){
+    e.toElement.style.borderRightColor = 'white';
+    e.toElement.style.borderBottomColor = 'white';
+}
+
+const pages = document.querySelectorAll('.page');
+console.log(pages);
+function pagesOrganizer(pages){
+    
+}
