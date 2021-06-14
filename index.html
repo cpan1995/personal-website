@@ -6,7 +6,27 @@
     <title>My Website</title>
 </head> 
 <body>
-    <h1>Hello World!</h1>
-    <script src="script.js"></script> 
+    <nav>
+        <div id="marker"></div>
+        <a href= "https://cpan1995.github.io/personal-website/">Home</a>
+        <a href= "https://github.com/cpan1995">GitHub</a>
+        <a href= "About/placeholder">About</a>
+        <a href= "personal/projects_placeholder">Projects</a>
+    </nav>
+    <script>
+        const item = document.querySelectorAll('nav a');
+
+        function indicator(e){
+            marker.style.left = e.offsetLeft + "px";
+            marker.style.width = e.offsetWidth + "px";
+            console.log(event);
+            console.log(marker.style.left);
+        }
+        item.forEach(link => {
+            link.addEventListener('mouseover', (e) => {
+                indicator(e.target);
+            })
+        })
+    </script>
 </body>
 </html> 
