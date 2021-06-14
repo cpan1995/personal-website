@@ -2,6 +2,9 @@
     box-sizing: border-box;
     font-family:consolas;
 }
+body{
+    background-image: url("./images/wallpaper.jpg");
+}
 body nav{
     text-align: center;
     position: relative;
@@ -12,12 +15,15 @@ body nav a{
     font-size: 1em;
     color: #000;
     text-decoration: none;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
 }
 nav #marker{
     position: absolute;
     height:2px;
     bottom: -8px;
-    background-color: #000;
+    background-color:white;
     display: table-cell;
     transition: 0.2s;
 }
