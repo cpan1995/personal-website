@@ -61,11 +61,9 @@ function updateArrowUpdater(){
     }
     else if(pageNodeCounter != 0){
         leftArrow.style.display = 'inline';
-    }
-    else{
-        leftArrow.style.display = 'inline';
         rightArrow.style.display  = 'inline';
     }
+    console.log(pageNodeCounter);
 }
 //Event Listeners when you click on the arrow keys
 rightArrow.addEventListener('click', function(event){
