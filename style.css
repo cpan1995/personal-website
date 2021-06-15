@@ -96,7 +96,8 @@ body .arrow {
     
 }
 div.dotDiv {
+    text-align: center;
     bottom: 12%;
-    position: absolute;
-    left: 38%;
+    position: flex;
+    margin-top: 10%;
 }

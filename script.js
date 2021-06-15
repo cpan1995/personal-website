@@ -19,9 +19,18 @@ function pageInit(pages){
     for(i = 0; i < pages.length; i++){
         dotDiv.appendChild(document.createElement("SPAN"));
         dotDiv.children[i].classList = 'dot';
+        dotDiv.children[i].id = i;
     }
     console.log(dotDiv);
     dotDiv.children[0].style.backgroundColor = 'white';
+
+    const dotItems = document.querySelectorAll('.dot');
+    
+    dotItems.forEach(link => {
+        link.addEventListener('click', (e) => {
+            sliderPageClickListener(e.target);
+        })
+    })
 
 
 }
@@ -41,6 +50,17 @@ function pageCycleLeft(e, pages){
     updateArrowUpdater();
 }
 
+//changes the page when clicking the slider
+function sliderPageCycle(){
+    for (i = 0; i < pages.length; i++){
+        if (i == pageNodeCounter){
+            pages[i].style.display = 'inline';
+        }
+        else{
+            pages[i].style.display = 'none';
+        }
+    }
+}
 function arrowMouseOver(e){
     e.toElement.style.borderRightColor = 'white';
     e.toElement.style.borderBottomColor = 'white';
@@ -80,6 +100,14 @@ function changeSliderColor(){
             dotDiv.children[i].style.backgroundColor = '#bbb';
         }
     }
+}
+
+//Event function for the slider click
+function sliderPageClickListener(event){
+    pageNodeCounter = event.id;
+    updateArrowUpdater();
+    sliderPageCycle();
+    changeSliderColor();
 }
 
 //Event Listeners when you click on the arrow keys
