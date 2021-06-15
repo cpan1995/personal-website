@@ -21,8 +21,6 @@
         function indicator(e){
             marker.style.left = e.offsetLeft + "px";
             marker.style.width = e.offsetWidth + "px";
-            console.log(event);
-            console.log(marker.style.left);
         }
         item.forEach(link => {
             link.addEventListener('mouseover', (e) => {
@@ -43,6 +41,8 @@
     <!---Arrow slider for main website-->
     <i class="arrow right"></i>
     <i class="arrow left"></i>
+    <div class =  dotDiv>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html> 

@@ -1,8 +1,9 @@
 const rightArrow = document.querySelector('.right');
 const leftArrow = document.querySelector('.left');
 const pages = document.querySelectorAll('.page');
+const dotDiv =  document.querySelector('div.dotDiv');
 let pageNodeCounter = 0;
-console.log(rightArrow);
+console.log(dotDiv);
 
 //Initialize the first page. Hides all the rest
 function pageInit(pages){
@@ -14,7 +15,13 @@ function pageInit(pages){
     if(pageNodeCounter == 0){
         leftArrow.style.display = 'none';
     }
-    console.log(pages);
+
+    for(i = 0; i < pages.length; i++){
+        dotDiv.appendChild(document.createElement("SPAN"));
+        dotDiv.children[i].classList = 'dot';
+    }
+
+    console.log(dotDiv);
 }
 
 //Cycling through pages with the arrow key
@@ -60,6 +67,7 @@ function updateArrowUpdater(){
         rightArrow.style.display  = 'inline';
     }
 }
+//Event Listeners when you click on the arrow keys
 rightArrow.addEventListener('click', function(event){
     pageCycleRight(event, pages);
 });

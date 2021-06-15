@@ -69,6 +69,7 @@ body .arrow {
     padding: 3px;
     width: 20px;
     height: 20px;
+    position: absolute fixed;
 }
 
 .right{
@@ -84,4 +85,18 @@ body .arrow {
     position: absolute;
     top: 50%;
     left: 10%;
+}
+.dot {
+    height: 10px;
+    width: 90px;
+    background-color: #bbb;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 0 12px;
+    
+}
+div.dotDiv {
+    position: absolute;
+    left: 43.6%;
+    bottom: 115px;
 }
