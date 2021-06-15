@@ -3,7 +3,6 @@ const leftArrow = document.querySelector('.left');
 const pages = document.querySelectorAll('.page');
 const dotDiv =  document.querySelector('div.dotDiv');
 let pageNodeCounter = 0;
-console.log(dotDiv);
 
 //Initialize the first page. Hides all the rest
 function pageInit(pages){
@@ -21,7 +20,6 @@ function pageInit(pages){
         dotDiv.children[i].classList = 'dot';
         dotDiv.children[i].id = i;
     }
-    console.log(dotDiv);
     dotDiv.children[0].style.backgroundColor = 'white';
 
     const dotItems = document.querySelectorAll('.dot');
@@ -36,17 +34,20 @@ function pageInit(pages){
 }
 
 //Cycling through pages with the arrow key
-function pageCycleRight(e, pages){
+function pageCycleRight(e){
+    console.log(pageNodeCounter);
+    console.log(pages[pageNodeCounter + 1]);
+    console.log(pages[1]);
     pages[pageNodeCounter].style.display = 'none';
-    pages[pageNodeCounter + 1].style.display = 'inline';
     pageNodeCounter++;
+    pages[pageNodeCounter].style.display = 'inline';
     updateArrowUpdater();
 }
 
-function pageCycleLeft(e, pages){
+function pageCycleLeft(e){
     pages[pageNodeCounter].style.display = 'none';
-    pages[pageNodeCounter - 1].style.display = 'inline';
     pageNodeCounter--;
+    pages[pageNodeCounter].style.display = 'inline';
     updateArrowUpdater();
 }
 
@@ -91,7 +92,6 @@ function updateArrowUpdater(){
 
 //Changes the color of the slider depending on which page it's on.
 function changeSliderColor(){
-    console.log(pageNodeCounter);
     for(i = 0; i < dotDiv.children.length; i++){
         if(i ==  pageNodeCounter){
             dotDiv.children[i].style.backgroundColor = 'white';
@@ -112,11 +112,11 @@ function sliderPageClickListener(event){
 
 //Event Listeners when you click on the arrow keys
 rightArrow.addEventListener('click', function(event){
-    pageCycleRight(event, pages);
+    pageCycleRight(event);
 });
 
 leftArrow.addEventListener('click', function(event){
-    pageCycleLeft(event, pages);
+    pageCycleLeft(event);
 })
 
 pageInit(pages);
