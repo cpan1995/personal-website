@@ -20,8 +20,10 @@ function pageInit(pages){
         dotDiv.appendChild(document.createElement("SPAN"));
         dotDiv.children[i].classList = 'dot';
     }
-
     console.log(dotDiv);
+    dotDiv.children[0].style.backgroundColor = 'white';
+
+
 }
 
 //Cycling through pages with the arrow key
@@ -43,15 +45,16 @@ function arrowMouseOver(e){
     e.toElement.style.borderRightColor = 'white';
     e.toElement.style.borderBottomColor = 'white';
 }
+
 function arrowMouseOut(e){
     e.toElement.style.borderRightColor = 'black';
     e.toElement.style.borderBottomColor = 'black';
 }
+
 //Updates the arrow as well as the current page counter
 function updateArrowUpdater(){
 
     if(pageNodeCounter >= pages.length - 1){
-        console.log(pageNodeCounter);
             rightArrow.style.display = 'none';
             leftArrow.style.display = 'inline';
     }
@@ -63,8 +66,22 @@ function updateArrowUpdater(){
         leftArrow.style.display = 'inline';
         rightArrow.style.display  = 'inline';
     }
-    console.log(pageNodeCounter);
+    changeSliderColor();
 }
+
+//Changes the color of the slider depending on which page it's on.
+function changeSliderColor(){
+    console.log(pageNodeCounter);
+    for(i = 0; i < dotDiv.children.length; i++){
+        if(i ==  pageNodeCounter){
+            dotDiv.children[i].style.backgroundColor = 'white';
+        }
+        else{
+            dotDiv.children[i].style.backgroundColor = '#bbb';
+        }
+    }
+}
+
 //Event Listeners when you click on the arrow keys
 rightArrow.addEventListener('click', function(event){
     pageCycleRight(event, pages);

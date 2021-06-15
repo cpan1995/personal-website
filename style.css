@@ -89,14 +89,14 @@ body .arrow {
 .dot {
     height: 10px;
     width: 90px;
-    background-color: #bbb;
+    background: #bbb;
     border-radius: 25px;
     display: inline-table;
     margin: 0 12px;
     
 }
 div.dotDiv {
-    text-align: center;
+    bottom: 12%;
     position: absolute;
-    bottom: 115px;
+    left: 38%;
 }
