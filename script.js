@@ -62,15 +62,25 @@ function sliderPageCycle(){
         }
     }
 }
-function arrowMouseOver(e){
-    e.toElement.style.borderRightColor = 'white';
-    e.toElement.style.borderBottomColor = 'white';
+
+//mouseleave and mouseout event for arrows left and right
+function rightArrowMouseOver(e){
+    rightArrow.style.fill = 'white';
 }
 
-function arrowMouseOut(e){
-    e.toElement.style.borderRightColor = 'black';
-    e.toElement.style.borderBottomColor = 'black';
+function rightArrowMouseOut(e){
+    rightArrow.style.fill = 'none';
 }
+
+function leftArrowMouseOver(e){
+    leftArrow.style.fill = 'white';
+}
+
+function leftArrowMouseOut(e){
+    leftArrow.style.fill = 'none';
+}
+
+
 
 //Updates the arrow as well as the current page counter
 function updateArrowUpdater(){
@@ -111,13 +121,27 @@ function sliderPageClickListener(event){
 }
 console.log(rightArrow);
 
-//Event Listeners when you click on the arrow keys
+//Event Listeners when you click/mouseover/mouseleave on the arrow keys
 rightArrow.addEventListener('click', function(event){
     pageCycleRight(event);
 });
 
 leftArrow.addEventListener('click', function(event){
     pageCycleLeft(event);
+})
+
+rightArrow.addEventListener('mouseover', function(event){
+    rightArrowMouseOver(event);
+})
+rightArrow.addEventListener('mouseleave', function(event){
+    rightArrowMouseOut(event);
+})
+
+leftArrow.addEventListener('mouseover', function(event){
+    leftArrowMouseOver(event);
+})
+leftArrow.addEventListener('mouseleave', function(event){
+    leftArrowMouseOut(event);
 })
 
 pageInit(pages);
