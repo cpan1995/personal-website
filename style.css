@@ -62,30 +62,6 @@ body p{
     font-size: smaller;
 }
 
-body .arrow {
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    position: absolute fixed;
-}
-
-.right{
-    transform: rotate(-45eg);
-    -webkit-transform: rotate(-45deg);
-    position: absolute;
-    right: 10%;
-    top: 50%;
-}
-.left{
-    transform: rotate(135eg);
-    -webkit-transform: rotate(135deg);
-    position: absolute;
-    top: 50%;
-    left: 10%;
-}
 .dot {
     height: 10px;
     width: 90px;
@@ -100,4 +76,16 @@ div.dotDiv {
     bottom: 12%;
     position: flex;
     margin-top: 10%;
+}
+
+body .rightArrow{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+
+body .leftArrow{
+    position: absolute;
+    top: 50%;
+    left: 10%;
 }

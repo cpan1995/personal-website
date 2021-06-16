@@ -1,5 +1,5 @@
-const rightArrow = document.querySelector('.right');
-const leftArrow = document.querySelector('.left');
+const rightArrow = document.querySelector('.rightArrow');
+const leftArrow = document.querySelector('.leftArrow');
 const pages = document.querySelectorAll('.page');
 const dotDiv =  document.querySelector('div.dotDiv');
 let pageNodeCounter = 0;
@@ -109,6 +109,7 @@ function sliderPageClickListener(event){
     sliderPageCycle();
     changeSliderColor();
 }
+console.log(rightArrow);
 
 //Event Listeners when you click on the arrow keys
 rightArrow.addEventListener('click', function(event){
