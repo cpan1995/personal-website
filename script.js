@@ -29,8 +29,6 @@ function pageInit(pages){
             sliderPageClickListener(e.target);
         })
     })
-
-
 }
 
 //Cycling through pages with the arrow key
@@ -65,7 +63,7 @@ function sliderPageCycle(){
 
 //mouseleave and mouseout event for arrows left and right
 function rightArrowMouseOver(e){
-    rightArrow.style.fill = 'white';
+    rightArrow.style.fill = '#90ee90';
 }
 
 function rightArrowMouseOut(e){
@@ -73,7 +71,7 @@ function rightArrowMouseOut(e){
 }
 
 function leftArrowMouseOver(e){
-    leftArrow.style.fill = 'white';
+    leftArrow.style.fill = '#90ee90';
 }
 
 function leftArrowMouseOut(e){
