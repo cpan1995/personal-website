@@ -39,18 +39,36 @@ body h2{
 }
 body div.page{
     border-radius: 25px;
-    border: .5px solid white;
+    background-color: white;
     text-align: center;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: black;
     width: 600px;
     margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 15%;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     overflow: auto;
+    box-shadow: 3px 3px 3px grey;;
 }
+
+body .stonyBrook1{
+    max-height:500px;
+}
+
+body .page1photosDiv{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    border-radius: 25px;
+}
+
 body div.page::-webkit-scrollbar{
+    width: 1em;
+}
+
+body .pageContainer::-webkit-scrollbar{
     width: 1em;
 }
 body p{
@@ -63,18 +81,23 @@ body p{
 
 .dot {
     height: 10px;
-    width: 90px;
+    width: 10px;
     background: #bbb;
     border-radius: 25px;
     display: inline-table;
     margin: 0 12px;
+    transition: 0.2s;
     
 }
 div.dotDiv {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
     text-align: center;
     bottom: 12%;
     position: flex;
-    margin-top: 2%;
+    margin:auto;
 }
 
 body .rightArrow{
@@ -91,5 +114,15 @@ body .leftArrow{
 
 .pageContainer {
     display: grid;
-    grid-template-rows: 700px 10%; 
+    grid-template-rows: 100px 100px 350px 150px 10%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.imageBox {
+    width: 800px;
+    overflow: auto;
+    border-radius: 25px;
+    
+}
+.imageBox::-webkit-scrollbar{
 }

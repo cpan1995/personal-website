@@ -21,6 +21,7 @@ function pageInit(pages){
         dotDiv.children[i].id = i;
     }
     dotDiv.children[0].style.backgroundColor = 'white';
+    dotDiv.children[0].style.width = '60px';
 
     const dotItems = document.querySelectorAll('.dot');
     
@@ -103,9 +104,11 @@ function changeSliderColor(){
     for(i = 0; i < dotDiv.children.length; i++){
         if(i ==  pageNodeCounter){
             dotDiv.children[i].style.backgroundColor = 'white';
+            dotDiv.children[i].style.width = '60px';
         }
         else{
             dotDiv.children[i].style.backgroundColor = '#bbb';
+            dotDiv.children[i].style.width = '10px';
         }
     }
 }
