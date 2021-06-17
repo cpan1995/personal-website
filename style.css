@@ -30,35 +30,34 @@ nav div#marker{
 body h1{
     text-align: center;
     font-weight: bold;
-    margin-top: 100px;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: black;
+    margin-top: 20px;
 }
 body h2{
     text-align: center;
     font-weight: bold;
-    margin-top: 100px;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: black;
+    margin-top: 50px;
 }
 body div.page{
+    border-radius: 25px;
+    border: .5px solid white;
     text-align: center;
     -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: black;
-    width: 500px;
-    margin: auto;
+    width: 600px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 15%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    overflow: auto;
+}
+body div.page::-webkit-scrollbar{
+    width: 1em;
 }
 body p{
     text-align: center;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: black;
     width: 500px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: smaller;
 }
 
@@ -75,7 +74,7 @@ div.dotDiv {
     text-align: center;
     bottom: 12%;
     position: flex;
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 body .rightArrow{
@@ -92,4 +91,5 @@ body .leftArrow{
 
 .pageContainer {
     display: grid;
+    grid-template-rows: 700px 10%; 
 }
