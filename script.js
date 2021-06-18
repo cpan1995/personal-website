@@ -103,7 +103,7 @@ function updateArrowUpdater(){
     changeSliderColor();
 }
 
-//Changes the color of the slider depending on which page it's on.
+//bottom page slider 
 function changeSliderColor(){
     for(i = 0; i < dotDiv.children.length; i++){
         if(i ==  pageNodeCounter){
@@ -114,7 +114,6 @@ function changeSliderColor(){
                 right: scrollCurrentArray[pageNodeCounter],
                 behavior: 'smooth'
             });
-            console.log(pageNodeCounter);
         }
         else{
             dotDiv.children[i].style.backgroundColor = '#bbb';
