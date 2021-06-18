@@ -4,6 +4,7 @@ const pages = document.querySelectorAll('.page');
 const dotDiv =  document.querySelector('div.dotDiv');
 const imageContainer = document.querySelector('.imageBox');
 let pageNodeCounter = 0;
+let scrollCurrentArray = {};
 
 //Initialize the first page. Hides all the rest
 function pageInit(pages){
@@ -31,7 +32,11 @@ function pageInit(pages){
             sliderPageClickListener(e.target);
         })
     })
-    console.log(imageContainer);
+    let temp = imageContainer.scrollWidth/pages.length
+    scrollCurrentArray[0] = 0;
+    for(i = 1; i <= pages.length; i++){
+        scrollCurrentArray[i] = (imageContainer.scrollWidth/pages.length) * i 
+    }
 }
 
 //Cycling through pages with the arrow key
@@ -104,6 +109,12 @@ function changeSliderColor(){
         if(i ==  pageNodeCounter){
             dotDiv.children[i].style.backgroundColor = 'white';
             dotDiv.children[i].style.width = '60px';
+            imageContainer.scrollTo({
+                left: scrollCurrentArray[pageNodeCounter],
+                right: scrollCurrentArray[pageNodeCounter],
+                behavior: 'smooth'
+            });
+            console.log(pageNodeCounter);
         }
         else{
             dotDiv.children[i].style.backgroundColor = '#bbb';
