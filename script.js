@@ -2,6 +2,7 @@ const rightArrow = document.querySelector('.rightArrow');
 const leftArrow = document.querySelector('.leftArrow');
 const pages = document.querySelectorAll('.page');
 const dotDiv =  document.querySelector('div.dotDiv');
+const imageContainer = document.querySelector('.imageBox');
 let pageNodeCounter = 0;
 
 //Initialize the first page. Hides all the rest
@@ -30,13 +31,11 @@ function pageInit(pages){
             sliderPageClickListener(e.target);
         })
     })
+    console.log(imageContainer);
 }
 
 //Cycling through pages with the arrow key
 function pageCycleRight(e){
-    console.log(pageNodeCounter);
-    console.log(pages[pageNodeCounter + 1]);
-    console.log(pages[1]);
     pages[pageNodeCounter].style.display = 'none';
     pageNodeCounter++;
     pages[pageNodeCounter].style.display = 'inline';
@@ -120,7 +119,6 @@ function sliderPageClickListener(event){
     sliderPageCycle();
     changeSliderColor();
 }
-console.log(rightArrow);
 
 //Event Listeners when you click/mouseover/mouseleave on the arrow keys
 rightArrow.addEventListener('click', function(event){
