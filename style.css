@@ -42,18 +42,13 @@ body div.page{
     background-color: white;
     text-align: center;
     -webkit-text-fill-color: black;
-    width: 600px;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    overflow: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 15%;
+    margin-right: 100px;
     box-shadow: 3px 3px 3px grey;;
     padding: 20px;
+    overflow:auto;
 }
 
 body .imageBoxChildren{
@@ -63,11 +58,6 @@ body .imageBoxChildren{
     border-radius: 20px;
 }
 
-body .page1photosDiv{
-    grid-row-start: 2;
-    grid-column-start: 4;
-    margin-left: 30%;
-}
 
 body div.page::-webkit-scrollbar{
     width: 1em;
@@ -95,13 +85,8 @@ body p{
     
 }
 div.dotDiv {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 6;
     text-align: center;
     bottom: 12%;
-    position: flex;
     margin:auto;
 }
 
@@ -118,18 +103,23 @@ body .leftArrow{
 }
 
 .pageContainer {
-    display: grid;
-    grid-template-rows: 100px 100px 350px 150px 10%;
-    grid-template-columns: 10% 10% 20% 20% 20% 20%;
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 5%;
 }
 
 .imageBox {
     width: 800px;
     overflow: auto;
     display: flex;
-    align-items: center;
     
 }
 .imageBox::-webkit-scrollbar{
     width: 1em;
+}
+
+@media (max-width: 800px) {
+    .pageContainer{
+        flex-direction: column;
+    }
 }
