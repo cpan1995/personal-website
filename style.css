@@ -2,8 +2,11 @@
     box-sizing: border-box;
     font-family:consolas;
 }
-body{
-    background-image: url("./images/background.jpg");
+html{
+    background: url("./images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
 body nav{
     text-align: center;
@@ -42,10 +45,6 @@ body div.page{
     background-color: white;
     text-align: center;
     -webkit-text-fill-color: black;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 15%;
-    margin-right: 100px;
     box-shadow: 3px 3px 3px grey;;
     padding: 20px;
     overflow:auto;
@@ -106,6 +105,8 @@ body .leftArrow{
     display: flex;
     flex-shrink: 0;
     margin-top: 5%;
+    align-items: center;
+    justify-content: center;
 }
 
 .imageBox {
