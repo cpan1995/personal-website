@@ -153,4 +153,6 @@ leftArrow.addEventListener('mouseleave', function(event){
     leftArrowMouseOut(event);
 })
 
-pageInit(pages);
+window.addEventListener('load', function () {
+    pageInit(pages);
+})
