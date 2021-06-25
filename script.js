@@ -32,7 +32,6 @@ function pageInit(pages){
             sliderPageClickListener(e.target);
         })
     })
-    let temp = imageContainer.scrollWidth/pages.length
     scrollCurrentArray[0] = 0;
     for(i = 1; i <= pages.length; i++){
         scrollCurrentArray[i] = (imageContainer.scrollWidth/pages.length) * i 
