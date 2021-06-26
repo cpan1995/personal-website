@@ -93,12 +93,14 @@ body .rightArrow{
     position: absolute;
     right: 5%;
     top: 50%;
+    opacity: 0.2;
 }
 
 body .leftArrow{
     position: absolute;
     top: 50%;
     left: 5%;
+    opacity: 0.2;
 }
 
 .pageContainer {
